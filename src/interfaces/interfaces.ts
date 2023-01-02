@@ -13,3 +13,12 @@ export type Category = {
   id: string;
   name: string;
 };
+
+export type Review = {
+  id: string;
+  date: string;
+  title: string;
+  comment: string;
+  rating: number;
+  productId: string;
+};

@@ -1,4 +1,4 @@
-import { Category, Product } from "./interfaces/interfaces";
+import { Category, Product, Review } from "../interfaces/interfaces";
 
 export const products: Product[] = [
   {
@@ -108,7 +108,7 @@ export const categories: Category[] = [
   },
 ];
 
-export const reviews = [
+export const reviews: Review[] = [
   {
     id: "b22da5d4-6a4b-4db5-8ec3-acc228c36260",
     date: "2021-01-01",
