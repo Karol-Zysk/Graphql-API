@@ -1,7 +1,17 @@
 import { Category, Product } from "../interfaces/interfaces";
+import { filterQuery } from "../utils/filterQuery";
 export const Query = {
-  products: (parent: any, args: any, { products }: { products: Product[] }) =>
-    products,
+  products: (
+    parent: any,
+    { filter }: { filter: any },
+    { products }: { products: Product[] }
+  ) => {
+    if (filter) {
+      products = filterQuery(filter, products);
+    }
+
+    return products;
+  },
   product: (
     parent: any,
     { id }: { id: string },
