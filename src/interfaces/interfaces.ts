@@ -4,9 +4,9 @@ export type Product = {
   description: string;
   quantity: number;
   price: number;
-  image: string;
+  image?: string;
   onSale: boolean;
-  categoryId: string;
+  categoryId?: string;
 };
 
 export type Category = {
@@ -22,3 +22,5 @@ export type Review = {
   rating: number;
   productId: string;
 };
+
+export type Model = Review | Category | Product
